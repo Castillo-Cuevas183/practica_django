@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Listado de libros</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Título</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Valoración</th>
+    </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        {% for libro in libros %}
+    <tr>
+        <td>{{ libro.titulo }}</td>
+        <td>{{ libro.autor }}</td>
+        <td>{{ libro.valoracion }}</td>
+    </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% extends 'base.html' %}
+
+{% block content %}
+    <h1>Libros con valoración mayor a 1500</h1>
+    <ul>
+        {% for libro in libros_mayor_1500 %}
+            <li>Titulo: {{ libro.titulo }}, Autor: {{ libro.autor }}, Valoración: {{ libro.valoracion }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Listado de todos los libros:</h2>
+    <ul>
+        {% for libro in todos_los_libros %}
+            <li>Titulo: {{ libro.titulo }}, Autor: {{ libro.autor }}, Valoración: {{ libro.valoracion }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %} {% endcomment %}
+
